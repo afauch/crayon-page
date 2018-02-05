@@ -1,0 +1,301 @@
+<!-- NOTES
+
+CRAYON UNITY UI TOOLKIT
+
+AARON.FAUCHER@GMAIL.COM
+
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- BASICS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>Crayon | VR UI toolkit</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- FAVICON
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+	<!-- MOBILE VIEWPORT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- BOOTSTRAP
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="/css/vendors/bootstrap.css">
+
+	<!-- RESET
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="/css/vendors/normalize.css">	
+
+	<!-- ADOBE TYPEKIT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="https://use.typekit.net/hpu4tuq.css">
+	<link href="https://fonts.googleapis.com/css?family=Vollkorn:700" rel="stylesheet">
+
+
+	<!-- FONT AWESOME
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+	<!-- JQUERY
+	––––––––––––––––––––––––––––––––––––––––––––––––––  --> 
+	<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+	<script src="/js/jquery.min.js"></script>
+
+	<!-- PRISM CODE FORMATTING
+	––––––––––––––––––––––––––––––––––––––––––––––––––  --> 
+	<link rel="stylesheet" type="text/css" href="css/prism.css" />
+
+	<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->	
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+
+	<!-- GOOGLE ANALYTICS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-71475646-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+
+</head>
+
+<!-- BODY
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<body id="p001">
+
+
+<!-- WORK
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section id="fold">
+
+	<div class="container">
+
+		<div class="content">
+
+			<div class="row">
+
+				<img id="plain-cube" src="img/plain-cube.png">				
+
+				<div class="col-xs-12 col-sm-8">
+					<img id="logo" src="img/crayon-logo.png">
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<h2 class="col-xs-12 col-sm-6">
+					<span class="line">a simpler UI toolkit</span>
+					<span class="line">for Unity</span>
+				</h2>
+
+			</div>
+		</div>
+
+	</div>
+
+</section>
+
+<!-- INTRO
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<section id="intro">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8">
+				<p>Crayon is a lightweight, open source 3D UI prototyping toolkit for Unity. It was made for 3D UI designers who prefer working with GameObjects and TextMeshes over the 2D-oriented Unity GUI Canvas system.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- DOWNLOAD
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section id="download">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+			<h2>Download Crayon</h2>
+				<a href="https://www.dropbox.com/s/qndcghbryhmi6cs/crayon-dev-0.0.10.unitypackage?dl=0" target="_blank">Download .unitypackage <span class="version">v0.0.10</span><i class="fas fa-download"></i></a>
+				<p>1. Drag the Crayon prefab into your scene.</p>
+				<img src="/img/prefab.png" id="prefab"/>
+				<p>2. Include the Crayon namespace in your C# code.</p>				
+				<pre><code class="language-csharp">using Crayon;</code></pre>
+
+			</div>	
+		</div>
+	</div>
+</section>
+
+<!-- USAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section id="usage">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-xs-12">
+			<h2>Usage</h2>
+				<p>Crayon contains several extension methods for the GameObject class, so you don't need to constantly call the Crayon namespace.</p>
+				<p>Crayon makes it easier to set states and transitions for the following properties on any GameObject:</p>
+				<ul>
+					<li>Opacity</li>
+					<li>Color</li>
+					<li>Position</li>
+					<li>Rotation</li>
+					<li>Size</li>
+				</ul>	
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-xs-12">
+			<h3>Fade In / Out</h3>
+				<p>Complex shaders can make opacity a pain, but Crayon makes it easy. It doesn't matter if your gameObject is text, sprite, or mesh... Crayon will figure that out for you. Fades are applied to all children automatically, so you don't have to worry about looping over nested child objects.</p>
+			<video autoplay="autoplay" loop="loop"/>
+				<source type="video/mp4" src="vid/fadein.mp4"/>
+				<img src="fadein.mp4"/>
+			</video>							
+<pre><code class="language-csharp">// Fade in over 800ms
+gameObject.FadeIn(0.8f);</code></pre>
+<pre><code class="language-csharp">// Fade with easing
+gameObject.FadeIn(0.8f, Easing.Linear);</code></pre>
+<pre><code class="language-csharp">// Instantiate a new GameObject and fade it in
+gameObject.FadeInNew(0.8f);</code></pre>
+<pre><code class="language-csharp">// Fade Out
+gameObject.FadeOut(0.8f);</code></pre>
+<pre><code class="language-csharp">// Fade Out and Destroy
+gameObject.FadeOut(0.8f, true);</code></pre>
+			</div>
+		</div>
+
+		<div class="row">
+		<div class="col-xs-12">
+		<h3>Transitions</h3>
+		<p>Crayon gives you simple functions for tweening common properties like color, position, rotation, size, and opacity.</p>
+		<h4>Color Transitions</h4>
+		<video  autoplay="autoplay" loop="loop"/>
+			<source type="video/mp4" src="vid/setcolor.mp4"/>
+			<img src="setcolor.mp4"/>
+		</video>		
+<pre><code class="language-csharp">// Set color without tweening
+Color32 red = new Color32(255, 0, 0, 255);
+gameObject.SetColor(red);</code></pre>		
+<pre><code class="language-csharp">// Tween to red over 800ms
+gameObject.SetColor(red, 0.8f);</code></pre>
+<pre><code class="language-csharp">// Tween to hex color -
+// Crayon will automatically convert to RGBA
+gameObject.SetColor("#FF0000", 0.8f);</code></pre>
+		</div>
+
+		<div class="col-xs-12">
+		<h4>Opacity Transitions</h4>
+<pre><code class="language-csharp">// Tween to 20% opacity over 800ms
+gameObject.SetOpacity(0.2f, 0.8f);</code></pre>
+		</div>
+
+		<div class="col-xs-12">
+		<h4>Transform Transitions</h4>
+		<video  autoplay="autoplay" loop="loop"/>
+			<source type="video/mp4" src="vid/setposition.mp4"/>
+			<img src="setposition.mp4"/>
+		</video>
+<pre><code class="language-csharp">// Tween position to an absolute position in world space
+gameObject.SetPosition(new Vector3(9.0f, 9.0f, 9.0f), 0.8f);</code></pre>
+<pre><code class="language-csharp">// Tween position, relative to current localPosition
+gameObject.SetRelativePosition(new Vector3(0.0f, 1.0f, 0.0f), 0.8f);</code></pre>
+		<video  autoplay="autoplay" loop="loop"/>
+			<source type="video/mp4" src="vid/setrotation.mp4"/>
+			<img src="setrotation.mp4"/>
+		</video>		
+<pre><code class="language-csharp">// Tween to rotation
+gameObject.SetRotation(new Vector3(9.0f, 9.0f, 9.0f), 0.8f, Easing.Cubic);</code></pre>
+		</div>
+
+		<div class="col-xs-12">
+		<h4>Cubic Bezier Tweens</h4>
+		<video  autoplay="autoplay" loop="loop"/>
+			<source type="video/mp4" src="vid/cubicbezier.mp4"/>
+			<img src="cubicbezier.mp4"/>
+		</video>		
+<pre><code class="language-csharp">// Tween to rotation
+gameObject.SetPosition(new Vector3(2.0f, 0.0f, 0.0f), 1.2f,
+	Easing.Custom, "0.34,0.89,0.71,-0.33");</code></pre>
+		</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>States</h3>
+				<p>Crayon also provides Editor components that make it easy to quickly define GameObject properties for common states like hover, selected, and default. The component also lets you define custom states that might be relevant to your own app.</p>
+
+				<img src="/img/states.png" id="states" />
+				<video autoplay="autoplay" loop="loop"/>
+					<source type="video/mp4" src="vid/setstate.mp4"/>
+					<img src="setstate.mp4"/>
+				</video>
+
+<pre><code class="language-csharp">// (Your own interaction method)
+private void OnFocus() {
+  // Switch to hover state
+  gameObject.SetState(hover);
+}</code></pre>
+<pre><code class="language-csharp">// (Your own interaction method)
+private void OnLightsDown() {
+  // Switch to a custom state
+  gameObject.SetState("LightsDown");
+}</code></pre>
+
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!-- ISSUES
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section id="issues">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8">
+				<h2>Improve Crayon</h2>
+				<p>If you've tried Crayon, I'd love to know how you think it could be better.</p>
+				<a href="https://github.com/afauch/crayon-dev" target="_blank">Suggest a feature <i class="fab fa-github"></i>
+</a>				
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div id="copyright" class="col-xs-12">
+				<span id="copyright-text">Crayon is maintained by <a href="http://afaucher.me" target="_blank">Aaron Faucher</a></span><span class="rule"></span>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- SCRIPTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="/js/script.js"></script>
+<script src="/js/prism.js"></script>
+
+</body>
+</html>
